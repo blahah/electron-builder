@@ -49,7 +49,7 @@ function cleanupPackageJson(data: any): any {
   try {
     let changed = false
     for (const prop of Object.getOwnPropertyNames(data)) {
-      if (prop[0] === "_" || prop === "dist" || prop === "gitHead" || prop === "keywords" || prop === "build" || prop === "devDependencies" || prop === "scripts") {
+      if (prop[0] === "_" || prop === "dist" || prop === "gitHead" || prop === "keywords" || prop === "build" || prop === "scripts") {
         delete data[prop]
         changed = true
       }
